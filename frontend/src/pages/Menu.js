@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Menu = () => {
   return (
     <div classname="text-center">
-        <h1>Admin</h1>
+        <h1 >Admin</h1>
       <div className="list-group">
         <NavLink
           to="/users"

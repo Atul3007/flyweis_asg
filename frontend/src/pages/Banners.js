@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import Menu from './Menu';
+import Header from './Header';
 
 const Banners = () => {
 
@@ -16,18 +17,34 @@ const Banners = () => {
     }
   }
 
+  const handleDelete=async(id)=>{
+    try {
+      console.log(banner)
+      const {data}=await axios.delete(`http://localhost:8000/api/delete/${id}`)
+     // console.log(data)
+       getBanner();
+       alert(data.message);
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   useEffect(()=>{
     getBanner();
   },[])
     
   return (
-   
+   <>
+   <Header/>
      <div className="row" style={{ margin: "20px" }}>
          <div className="col-md-3">
           <Menu/>
         </div>
         <div className="col-md-9">
-        <h1>Banners</h1>
+          <div style={{display:'flex',justifyContent:"space-between"}}>
+          <h1>Banners</h1>
+          <button className='btn btn-primary' style={{width:"170px"}}>Create Banner</button>
+          </div>
    <div className="border-shadow">
         <table className="table">
           <thead>
@@ -68,7 +85,7 @@ const Banners = () => {
                   </span>
                   <span
                     style={{ cursor: "pointer" }}
-                    // onClick={() => handleDelete(user.id)}
+                     onClick={() => handleDelete(user._id)}
                   >
                     🗑️
                   </span>
@@ -80,7 +97,7 @@ const Banners = () => {
       </div>
         </div>
       </div>
-   
+   </>
   )
 }
 

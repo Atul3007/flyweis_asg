@@ -36,45 +36,47 @@ const Login = () => {
 
   return (
     <>
-      <div className="register">
-        <h1>Login Page</h1>
-        <form onSubmit={handleSubmit}>
-      
-          <div className="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Email"
-              required
-            />
-          </div>
-          <div className="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="form-control"
-              id="exampleInputPassword1"
-              placeholder="Password"
-              required
-            />
-          </div>
-          <div style={{display:"grid",justifyContent:"space-between"}}>
-            <div>
-            </div>
-            <div>
-            <button type="submit" className="btn btn-primary" style={{marginLeft:70,marginTop:25}}>
-            Submit
-          </button>
-            </div>
-          </div>
-        </form>
+      <div className="register" style={{margin:"150px"}}>
+        <h3 style={{textAlign:"center"}}>Login as a admin</h3>
+        <form onSubmit={handleSubmit} style={{ maxWidth: '400px',marginLeft:"550px",marginTop:"50px" }}>
+  <div className="mb-3">
+    <label htmlFor="exampleInputEmail1" className="form-label">
+      Email address
+    </label>
+    <input
+      type="email"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+      className="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="Enter your email"
+      required
+    />
+  </div>
+  <div className="mb-3">
+    <label htmlFor="exampleInputPassword1" className="form-label">
+      Password
+    </label>
+    <input
+      type="password"
+      value={password}
+      onChange={(e) => setPassword(e.target.value)}
+      className="form-control"
+      id="exampleInputPassword1"
+      placeholder="Enter your password"
+      required
+    />
+  </div>
+  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <div>
+      <button type="submit" className="btn btn-primary" style={{ marginTop: '15px',marginLeft:"100px" }}>
+        Submit
+      </button>
+    </div>
+  </div>
+</form>
+
       </div>
     </>
   );
