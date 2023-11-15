@@ -2,14 +2,15 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import Menu from './Menu';
 import Header from './Header';
+import { useNavigate,useLocation } from "react-router-dom";
 
 const Banners = () => {
 
   const [banner,setBanner]=useState([]);
- 
+  const navigate=useNavigate();
   const getBanner=async()=>{
     try {
-      const {data}=await axios.get("http://localhost:8000/api/all-banner");
+      const {data}=await axios.get("https://pear-cloudy-chipmunk.cyclic.app/api/all-banner");
       setBanner(data.bannerbooks);
       console.log(banner)
     } catch (error) {
@@ -20,8 +21,7 @@ const Banners = () => {
   const handleDelete=async(id)=>{
     try {
       console.log(banner)
-      const {data}=await axios.delete(`http://localhost:8000/api/delete/${id}`)
-     // console.log(data)
+      const {data}=await axios.delete(`https://pear-cloudy-chipmunk.cyclic.app/api/delete/${id}`)
        getBanner();
        alert(data.message);
     } catch (error) {
@@ -43,7 +43,7 @@ const Banners = () => {
         <div className="col-md-9">
           <div style={{display:'flex',justifyContent:"space-between"}}>
           <h1>Banners</h1>
-          <button className='btn btn-primary' style={{width:"170px"}}>Create Banner</button>
+          <button className='btn btn-primary' style={{width:"170px"}} onClick={()=>{navigate("/create-banner")}}>Create Banner</button>
           </div>
    <div className="border-shadow">
         <table className="table">
@@ -79,7 +79,7 @@ const Banners = () => {
                 <td>
                   <span
                     style={{ cursor: "pointer", marginRight: "10px" }}
-                    // onClick={() => handleEdit(user.id)}
+                    onClick={()=>{navigate(`/edit-banner/${user._id}`)}}
                   >
                     ✏️
                   </span>

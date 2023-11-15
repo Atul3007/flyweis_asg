@@ -2,15 +2,18 @@ import React, { useState } from "react";
 import Header from "./Header";
 import Menu from "./Menu";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-const BannerForm = () => {
+const BannerEdit = () => {
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
   const [urlLink, setUrlLink] = useState("");
   const [bannerContext, setBannerContext] = useState("");
   const [bannerCover, setBannerCover] = useState(null);
   const navigate=useNavigate();
+
+  const {id}=useParams();
+console.log(id)
 
   const handleSubmit = async(e) => {
     e.preventDefault();
@@ -21,9 +24,10 @@ const BannerForm = () => {
       bannerInfo:bannerContext,
       imageUrl:bannerCover,
     };
-   const {data}=await axios.post("https://pear-cloudy-chipmunk.cyclic.app/api/create-banner",obj);
+   const {data}=await axios.put(`https://pear-cloudy-chipmunk.cyclic.app/api/update-banner/${id}`,obj);
+   console.log(data)
    if(data){
-    alert("Banner created successfully!!!")
+    alert("Banner updated successfully!!!")
      navigate("/banners")
    }
   };
@@ -36,7 +40,7 @@ const BannerForm = () => {
           <Menu />
         </div>
         <div className="col-md-9" style={{marginTop:"5px"}}>
-        <h3 style={{textAlign:"center"}}>Create Banner</h3>
+            <h3 style={{textAlign:"center"}}>Edit Banner</h3>
           <form onSubmit={handleSubmit} className="banner-form">
             <div className="form-group">
               <label htmlFor="title" className="form-label">
@@ -118,4 +122,4 @@ const BannerForm = () => {
   );
 };
 
-export default BannerForm;
+export default BannerEdit;

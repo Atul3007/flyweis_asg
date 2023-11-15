@@ -36,9 +36,9 @@ const Login = () => {
 
   return (
     <>
-      <div className="register" style={{margin:"150px"}}>
+      <div className="register" style={{margin:"100px"}}>
         <h3 style={{textAlign:"center"}}>Login as a admin</h3>
-        <form onSubmit={handleSubmit} style={{ maxWidth: '400px',marginLeft:"550px",marginTop:"50px" }}>
+        <form onSubmit={handleSubmit} style={{ maxWidth: '400px',marginLeft:"350px",marginTop:"50px" }}>
   <div className="mb-3">
     <label htmlFor="exampleInputEmail1" className="form-label">
       Email address
