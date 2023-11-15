@@ -19,11 +19,21 @@ const Users = () => {
         config
       );
       setUsers(data.data);
-      console.log(users);
+     // console.log(users);
     } catch (error) {
       console.error("Error fetching user data:", error);
     }
   };
+
+// -------delete--------
+
+const handleDelete=async()=>{
+  try {
+    const {data}=await axios.delete("")
+  } catch (error) {
+    console.log(error)
+  }
+}
 
   useEffect(() => {
     getUsers();
@@ -65,6 +75,20 @@ const Users = () => {
                 <td>{user.email}</td>
                 <td>{user.phone}</td>
                 <td>32</td>
+                <td>
+                  <span
+                    style={{ cursor: "pointer", marginRight: "10px" }}
+                    // onClick={() => handleEdit(user.id)}
+                  >
+                    ✏️
+                  </span>
+                  <span
+                    style={{ cursor: "pointer" }}
+                     onClick={() => handleDelete(user.id)}
+                  >
+                    🗑️
+                  </span>
+                </td>
               </tr>
             ))}
           </tbody>
