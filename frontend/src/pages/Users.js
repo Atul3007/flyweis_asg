@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Menu from './Menu';
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -40,8 +41,12 @@ const handleDelete=async()=>{
   }, []);
 
   return (
-    <div>
-      <h1>All Users</h1>
+    <div className="row" style={{ margin: "20px" }}>
+         <div className="col-md-3">
+          <Menu/>
+        </div>
+        <div className="col-md-9">
+        <h1>All Users</h1>
       <div className="border-shadow">
         <table className="table">
           <thead>
@@ -94,6 +99,7 @@ const handleDelete=async()=>{
           </tbody>
         </table>
       </div>
+        </div>
     </div>
   );
 };

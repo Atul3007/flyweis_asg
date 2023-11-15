@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import Menu from './Menu';
 
 const Banners = () => {
 
@@ -20,8 +21,13 @@ const Banners = () => {
   },[])
     
   return (
-   <>
-   <h1>Banners</h1>
+   
+     <div className="row" style={{ margin: "20px" }}>
+         <div className="col-md-3">
+          <Menu/>
+        </div>
+        <div className="col-md-9">
+        <h1>Banners</h1>
    <div className="border-shadow">
         <table className="table">
           <thead>
@@ -72,7 +78,9 @@ const Banners = () => {
           </tbody>
         </table>
       </div>
-   </>
+        </div>
+      </div>
+   
   )
 }
 
