@@ -56,9 +56,7 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  background-color: #333; /* Example background color */
-  color: #fff; /* Example text color */
+  padding: 3px;
 }
 
 .header-left {
@@ -97,4 +95,128 @@ code {
   font-size: 20px;
   margin-right: 10px;
   cursor: pointer;
+}
+
+ .container{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+
+}
+
+.left-col{
+  background-color: #02245f;
+  color: white;
+  width: 40%;
+  align-items: center;
+  text-size-adjust: auto;
+} 
+
+.right-col{
+  width: 60%;
+  border-radius: 40%;
+}
+
+.right-col {
+  margin-top: 70px;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.right-col h4 {
+  color: rgb(172, 170, 170);
+}
+
+.right-col h2 {
+  color: black;
+}
+
+.right-col h5 {
+  color:  rgb(172, 170, 170);
+  margin-top: 50px;
+}
+
+.right-col button {
+  background-color: #03307e;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.right-col button:hover {
+  background-color: #03307e;
+}
+
+.right-col form {
+  max-width: 400px;
+  margin-top: 50px;
+  margin-left: 130px;
+}
+
+.right-col input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.right-col .btn-primary {
+  margin-left: 100px;
+}
+
+.user-container {
+  display: flex;
+}
+
+.col-left {
+  flex: 0 0 20%; 
+  background-color: #03307e;
+  color: white;
+}
+
+.col-right {
+  flex: 1;
+  padding: 20px;
+}
+
+.col-md-3 {
+  width: 100%; /* Make the header take the full width of the col-right container */
+}
+
+.border-shadow {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.table {
+  border: none; /* Remove table border */
+  border-collapse: collapse; /* Remove spacing between cells */
+  width: 100%;
+}
+
+.table th,
+.table td {
+  border: none; /* Remove borders from table cells */
+  padding: 12px;
+  vertical-align: middle;
+}
+
+.table thead tr {
+  background-color: #f8f9fa; /* Add a background color for the header row */
+}
+
+
+.table span.edit {
+  color: #3498db; /* Blue color */
+}
+
+.table span.delete {
+  color: #3498db; /* Red color */
 }

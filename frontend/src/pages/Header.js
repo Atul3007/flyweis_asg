@@ -3,7 +3,7 @@ import "../index.css";
 
 const Header = () => {
   return (
-    <header className="header"  style={{height:"100px"}}>
+    <header className="header"  style={{height:"60px"}}>
       <div className="header-left">
         <div className="admin-info"style={{marginLeft:"30px"}}>
           <img

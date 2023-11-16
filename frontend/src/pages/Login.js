@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate,useLocation } from "react-router-dom";
+import "../index.css";
 //import { useAuth } from "../../context/Auth";
 
 const Login = () => {
@@ -35,14 +36,21 @@ const Login = () => {
   };
 
   return (
-    <>
-      <div className="register" style={{margin:"100px"}}>
-        <h3 style={{textAlign:"center"}}>Login as a admin</h3>
-        <form onSubmit={handleSubmit} style={{ maxWidth: '400px',marginLeft:"350px",marginTop:"50px" }}>
+    <div className="container" >
+    <div className="left-col" >
+      <div style={{textAlign:"center",marginTop:"50%"}} >
+        <h1>Lorem ipsum <br /> dolor sit <br /> amet consectetur <br /> es </h1>
+      </div>
+    </div>
+      <div className="right-col" style={{margin:""}}>
+        <div>
+          <h4>Welcome Back!!!</h4>
+          <h3>Sign in</h3>
+          <button>Sign in with Google</button>
+        </div>
+        <h5>Or</h5>
+        <form onSubmit={handleSubmit} style={{ marginTop:"20px" }}>
   <div className="mb-3">
-    <label htmlFor="exampleInputEmail1" className="form-label">
-      Email address
-    </label>
     <input
       type="email"
       value={email}
@@ -55,9 +63,6 @@ const Login = () => {
     />
   </div>
   <div className="mb-3">
-    <label htmlFor="exampleInputPassword1" className="form-label">
-      Password
-    </label>
     <input
       type="password"
       value={password}
@@ -70,15 +75,14 @@ const Login = () => {
   </div>
   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
     <div>
-      <button type="submit" className="btn btn-primary" style={{ marginTop: '15px',marginLeft:"100px" }}>
-        Submit
+      <button type="submit" className="btn btn-primary" style={{ marginTop: '15px',marginLeft:"150px" }}>
+        Login
       </button>
     </div>
   </div>
 </form>
-
       </div>
-    </>
+    </div>
   );
 };
 
