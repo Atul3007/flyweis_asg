@@ -48,16 +48,19 @@ const Banners = () => {
           </div>
           <hr />
           <div className="col-md-12">
-            <h1>Banners</h1>
+            <div style={{display:"flex",justifyContent:"space-between"}}>
+            <h1 style={{marginLeft:"30px"}}>Banners</h1>
             <button
               className="btn btn-primary"
-              style={{ width: "170px" }}
+              style={{ width: "200px",height:"40px" }}
               onClick={() => {
                 navigate("/create-banner");
               }}
             >
               Create Banner
             </button>
+            </div>
+            
           </div>
           <div className="border-shadow" style={{border:0,margin:"15px"}}>
             <table className="table">
