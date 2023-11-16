@@ -41,7 +41,7 @@ code {
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color:#021c4b;
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -50,7 +50,7 @@ code {
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #021c4b;
 }
 
 .header {
@@ -139,7 +139,7 @@ code {
 }
 
 .right-col button {
-  background-color: #03307e;
+  background-color: #021c4b;
   color: #fff;
   padding: 10px 15px;
   border: none;
@@ -148,7 +148,7 @@ code {
 }
 
 .right-col button:hover {
-  background-color: #03307e;
+  background-color: #021c4b;
 }
 
 .right-col form {
@@ -176,7 +176,7 @@ code {
 
 .col-left {
   flex: 0 0 20%; 
-  background-color: #03307e;
+  background-color: #021c4b;
   color: white;
 }
 
@@ -224,5 +224,5 @@ code {
 
 
 .icon{
-  background-color: #03307e;
+  background-color: #021c4b;
 }
