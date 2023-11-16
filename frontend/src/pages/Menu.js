@@ -10,13 +10,13 @@ const Menu = () => {
           to="/users"
           className="list-group-item list-group-item-action"
         >
-          <h5>Users</h5>
+          <h5>⚙️ Users</h5>
         </NavLink>
         <NavLink style={{margin:"10px",marginLeft:"30px"}}
           to="/banners"
           className="list-group-item list-group-item-action"
         >
-            <h5>Banners</h5>
+            <h5>🕒 Banners</h5>
         </NavLink>
        
       </div>

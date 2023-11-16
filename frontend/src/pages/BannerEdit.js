@@ -34,12 +34,14 @@ console.log(id)
 
   return (
     <>
-      <Header/>
-      <div className="row" style={{ margin: "2px" }}>
-        <div className="col-md-3">
-          <Menu />
+      <div className="user-container">
+      <div className="col-left"><Menu/></div>
+      <div className="col-right">
+         <div className="col-md-3">
+         <Header/>
         </div>
-        <div className="col-md-9" style={{marginTop:"5px"}}>
+        <hr />
+        <div className="col-md-12" >
             <h3 style={{textAlign:"center"}}>Edit Banner</h3>
           <form onSubmit={handleSubmit} className="banner-form">
             <div className="form-group">
@@ -112,11 +114,17 @@ console.log(id)
                 required
               />
             </div>
+            <div style={{display:"flex",marginLeft:"300px"}}>
             <button type="submit" className="btn btn-primary">
-              Submit
+              Save Changes
             </button>
+            <button type="submit" className="btn btn-outline">
+              Cancel
+            </button>
+            </div>
           </form>
         </div>
+      </div>
       </div>
     </>
   );

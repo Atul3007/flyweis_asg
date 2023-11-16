@@ -17,6 +17,7 @@ code {
 .banner-form {
   max-width: 600px;
   margin: 0 auto;
+  margin-top: 0;
   background-color: #f8f9fa;
   padding: 20px;
   border-radius: 8px;
@@ -105,7 +106,7 @@ code {
 }
 
 .left-col{
-  background-color: #02245f;
+  background-color: #021c4b;
   color: white;
   width: 40%;
   align-items: center;
