@@ -59,22 +59,20 @@ const Banners = () => {
               Create Banner
             </button>
           </div>
-          <div className="border-shadow">
+          <div className="border-shadow" style={{border:0,margin:"15px"}}>
             <table className="table">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Banner Image</th>
-                  <th scope="col">Title</th>
-                  <th scope="col">Url Link</th>
-                  <th scope="col">Banner Description</th>
+                  <td  style={{color:"grey"}}>Banner Image</td>
+                  <td  style={{color:"grey"}}>Title</td>
+                  <td  style={{color:"grey"}}>Url Link</td>
+                  <td  style={{color:"grey"}}>Banner Description</td>
                 </tr>
               </thead>
               <tbody>
                 {banner.map((user, index) => (
                   <tr key={index}>
-                    <td>{index + 1}</td>
-                    <td>
+                    <td style={{color:"gray"}}>
                       <div style={{ display: "flex", alignItems: "center" }}>
                         <img
                           src={user.image}
@@ -87,11 +85,12 @@ const Banners = () => {
                         />
                       </div>
                     </td>
-                    <td>{user.title}</td>
-                    <td>{user.linkUrl}</td>
-                    <td>{user.bannerInfo}</td>
-                    <td>
+                    <td style={{color:"gray"}}>{user.title}</td>
+                    <td style={{color:"gray"}}>{user.linkUrl}</td>
+                    <td style={{color:"gray"}}>{user.bannerInfo}</td>
+                    <td style={{color:"gray"}}>
                       <span
+                      className="Edit"
                         style={{ cursor: "pointer", marginRight: "10px" }}
                         onClick={() => {
                           navigate(`/edit-banner/${user._id}`);
@@ -100,6 +99,7 @@ const Banners = () => {
                         ✏️
                       </span>
                       <span
+                        className="Delete"
                         style={{ cursor: "pointer" }}
                         onClick={() => handleDelete(user._id)}
                       >
